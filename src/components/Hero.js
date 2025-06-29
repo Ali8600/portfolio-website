@@ -3,11 +3,20 @@ import React from "react";
 function Hero() {
   return (
     <div className="relative">
-      <div
-        className="flex min-h-[480px] flex-col items-start justify-end px-4 pb-10 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'linear-gradient(rgba(16,26,35,0.5) 0%, rgba(16,26,35,0.7) 100%), url(/portfolio-cover.jpeg)' }}
-      >
-        <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-4 max-w-xs mb-8 animate-fade-in shadow-xl">
+      <div className="flex min-h-[480px] flex-col items-start justify-end px-4 pb-10">
+        {/* Curved, shadowed background image */}
+        <div
+          className="absolute inset-0 z-0 rounded-3xl shadow-2xl overflow-hidden m-4"
+          style={{
+            backgroundImage:
+              'linear-gradient(rgba(16,26,35,0.5) 0%, rgba(16,26,35,0.7) 100%), url(/portfolio-cover.jpeg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            filter: 'brightness(0.95)'
+          }}
+        ></div>
+        {/* Glass card overlay */}
+        <div className="relative z-10 backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-4 max-w-xs mb-8 animate-fade-in shadow-xl mt-10 ml-6">
           <h1 className="text-xl md:text-2xl font-black leading-tight tracking-[-0.033em] text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-fuchsia-500 to-pink-500 mb-1">
             Hi, I'm Ali Idrees
           </h1>
