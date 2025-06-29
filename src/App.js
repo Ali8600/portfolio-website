@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Header, Hero, Projects, Skills, Contact, Footer } from "./components";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="relative flex min-h-screen flex-col bg-[#101a23] dark group/design-root overflow-x-hidden" style={{ fontFamily: '"Space Grotesk", "Noto Sans", sans-serif' }}>
+      <div className="layout-container flex h-full grow flex-col">
+        <Header />
+        <div className="px-40 flex flex-1 justify-center py-5">
+          <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <Hero />
+            <Projects />
+            <Skills />
+            <Contact />
+          </div>
+        </div>
+        <Footer />
+      </div>
     </div>
   );
 }
