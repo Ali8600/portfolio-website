@@ -23,7 +23,13 @@ function Hero() {
           <h2 className="text-white/90 text-xs md:text-sm font-normal leading-normal mb-3">
             Software Engineer specializing in building high-quality web applications. Passionate about creating innovative solutions and continuously learning new technologies.
           </h2>
-          <button className="transition-all duration-300 bg-gradient-to-r from-blue-500 to-fuchsia-500 hover:from-fuchsia-500 hover:to-blue-500 text-white font-bold py-2 px-5 rounded-full shadow-lg hover:scale-105 focus:outline-none text-xs">
+          <button
+            className="transition-all duration-300 bg-gradient-to-r from-blue-500 to-fuchsia-500 hover:from-fuchsia-500 hover:to-blue-500 text-white font-bold py-2 px-5 rounded-full shadow-lg hover:scale-105 focus:outline-none text-xs"
+            onClick={() => {
+              const el = document.getElementById('projects');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
             <span className="truncate">View Projects</span>
           </button>
         </div>
