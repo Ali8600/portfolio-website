@@ -4,7 +4,7 @@ const projects = [
   {
     title: "UBU Platform – Affiliate Marketing App",
     desc: "Developed a multi-role web platform connecting brands, influencers, and customers with Amazon affiliate integrations. Implemented campaign and document management, email dispatch via Mailgun, and secure file uploads using AWS S3. Designed dynamic React components and built backend APIs using NestJS (Clean Architecture) with PostgreSQL.",
-    img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80",
+    img: "/UBUDemo.png",
     tags: ["NestJS", "React", "PostgreSQL", "AWS", "Docker"]
   },
   {
@@ -30,8 +30,22 @@ function Projects() {
           {projects.map((project, idx) => (
             <div
               key={project.title}
-              className="flex flex-1 flex-col gap-3 rounded-2xl min-w-60 max-w-xs bg-white/10 border border-white/20 shadow-xl backdrop-blur-md transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl animate-fade-in"
+              className={
+                "flex flex-1 flex-col gap-3 rounded-2xl min-w-60 max-w-xs bg-white/10 border border-white/20 shadow-xl backdrop-blur-md transition-transform duration-300 animate-fade-in cursor-pointer group hover:scale-105 hover:shadow-2xl hover:border-fuchsia-400"
+              }
               style={{ animationDelay: `${0.1 * idx}s` }}
+              onClick={() => {
+                if (project.title.includes('UBU Platform')) {
+                  window.open('https://ubu.live', '_blank', 'noopener noreferrer');
+                }
+              }}
+              tabIndex={0}
+              role="button"
+              onKeyPress={e => {
+                if (e.key === 'Enter' && project.title.includes('UBU Platform')) {
+                  window.open('https://ubu.live', '_blank', 'noopener noreferrer');
+                }
+              }}
             >
               <div
                 className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-2xl border-b border-white/10"
