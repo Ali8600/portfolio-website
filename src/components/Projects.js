@@ -38,6 +38,9 @@ function Projects() {
                 if (project.title.includes('UBU Platform')) {
                   window.open('https://ubu.live', '_blank', 'noopener noreferrer');
                 }
+                else if (project.title.includes('Mind Miner')) {
+                  window.open('https://codingcops.com/case-studies/mindminer/', '_blank', 'noopener noreferrer');
+                }
               }}
               tabIndex={0}
               role="button"
