@@ -10,7 +10,7 @@ const projects = [
   {
     title: "Mind Miner – AI-Based Web Platform",
     desc: "Developed a full-stack AI-powered platform using the MERN stack, integrated OpenAI. Automated document creation with structured prompts, leveraging PDFKit for dynamic PDF generation and OpenAI for content synthesis.",
-    img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+    img: "/mind-miner.png",
     tags: ["React", "Node.js", "MongoDB", "OpenAI"]
   },
   {
